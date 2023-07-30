@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.headerCollapse .ant-collapse-header  {
+      @apply   text-lg font-semibold text-[#142349] !important;
+}
