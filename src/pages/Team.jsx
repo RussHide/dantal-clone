@@ -27,16 +27,16 @@ const Team = () => {
   return (
     <div className='bg-middleLight bg-cover bg-center bg-no-repeat '>
       <div>
-        <div className="flex my-10 mx-auto container px-10">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row  my-10 mx-auto container px-10">
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
             <h2 className='text-[#142349] text-5xl font-bold'>Our Friendly <span className="text-[#4268D2]">Dentists</span></h2>
             <h2 className="text-[#4268D2] text-5xl font-bold mt-2">Team</h2>
           </div>
-          <div className="w-1/2">
-            <p className='text-lg text-gray-600'>
+          <div className="w-full lg:w-1/2 my-5 lg:my-0">
+            <p className='text-lg text-gray-600 text-center lg:text-left'>
               The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and specialist dental treatments
             </p>
-            <a href="#" className='flex justify-start items-center text-[#4268D2] font-bold hover:text-[#142349] transition-colors duration-300 mt-4'>
+            <a href="#" className='flex justify-center lg:justify-start  items-center text-[#4268D2] font-bold hover:text-[#142349] transition-colors duration-300 mt-4'>
               <p>Discover more </p>
               <MdKeyboardDoubleArrowRight className='mt-1 ml-1 text-xl' />
             </a>
@@ -55,6 +55,21 @@ const Team = () => {
             }}
             loop={true}
             loopPreventsSliding
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
+              // when window width is >= 480px
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20
+              },
+            }}
           >
             {
               [...doctors, ...doctors].map((doctor, index) => (

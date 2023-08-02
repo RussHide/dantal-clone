@@ -24,8 +24,8 @@ const WhatWeDo = () => {
                         We are a private health care dedicated to providing quality dental care in cosmetic, restorative, and general dentistry.
                     </p>
                 </div>
-                <div className="grid grid-cols-3 gap-10">
-                    <div className='col-span-2 bg-teeth bg-cover bg-center bg-no-repeat  bg-[#4268D2] w-full relative  container  mx-auto rounded-tr-[80px] rounded-bl-[80px] p-10 ' >
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <div className='col-span-1 lg:col-span-2 bg-teeth bg-cover bg-center bg-no-repeat  bg-[#4268D2] w-full relative  container  mx-auto rounded-tr-[80px] rounded-bl-[80px] p-10 ' >
                         <div className='flex flex-col justify-start space-y-7  '>
                             <h2 className='text-white text-5xl font-semibold mb-2 max-w-2xl'>Get an interest-free loan to pay for your treatment</h2>
                             <a href="#" className='flex justify-start items-center text-white font-bold hover:text-[#c5d6ff] transition-colors duration-300  '>
@@ -37,11 +37,11 @@ const WhatWeDo = () => {
                     </div>
                     {
                         services.map((service, index) => (
-                            <div key={index} className='bg-white rounded-lg p-8 space-y-5'>
-                                <div>
-                                    <img src={service.image} className='w-1/6' alt="" />
+                            <div key={index} className='bg-white rounded-lg p-8 space-y-5 flex flex-col md:flex-row justify-center items-center  lg:space-x-0 lg:block'>
+                                <div >
+                                    <img src={service.image} className=' lg:w-1/6' alt="" />
                                 </div>
-                                <div className='space-y-2'>
+                                <div className='space-y-2 text-center md:text-left  w-full'>
                                     <p className='font-semibold text-xl'>{service.name}</p>
                                     <p className='text-gray-600 text-md font-medium'>{service.desc}</p>
                                 </div>

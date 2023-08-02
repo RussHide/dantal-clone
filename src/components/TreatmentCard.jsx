@@ -3,11 +3,11 @@ import React from 'react'
 const TreatmentCard = ({ treatment }) => {
   const { name, desc, image } = treatment
   return (
-    <div className='flex rounded-2xl overflow-hidden'>
-      <div className='w-1/2'>
+    <div className='flex flex-col lg:flex-row rounded-2xl overflow-hidden'>
+      <div className='w-full lg:w-1/2'>
         <img src={image} alt="" />
       </div>
-      <div className='bg-[#4268D2] p-7 w-1/2 flex justify-between flex-col'>
+      <div className='bg-[#4268D2] p-7 w-full lg:w-1/2 flex justify-between flex-col'>
         <h3 className='font-semibold text-2xl text-white'>{name}</h3>
         <p className='text-gray-200 text-lg'>{desc}</p>
         <a href='#' className='w-fit flex justify-center items-center flex-col'>

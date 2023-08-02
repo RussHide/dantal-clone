@@ -1,9 +1,10 @@
 import Logo from '@img/Logo.png'
+import { MdOutlineShortText } from 'react-icons/md'
 
 const Navbar = () => {
   return (
     <div className='relative z-50'>
-      <div className='flex justify-between px-7 items-center py-4'>
+      <div className='hidden lg:flex justify-between px-7 items-center py-4'>
         <div>
           <img src={Logo} className='h-1/2 w-1/2 ' alt="" />
         </div>
@@ -19,6 +20,16 @@ const Navbar = () => {
             <button className='bg-[#4268D2] hover:bg-[#3353AE] font-semibold text-white  px-5 py-1.5 rounded-[100px]'>Emergency Call</button>
           </div>
         </div>
+      </div>
+
+      <div className='lg:hidden flex justify-between px-7 items-center py-4'>
+        <div>
+          <img src={Logo} className='h-1/2 w-1/2 ' alt="" />
+        </div>
+        <div>
+          <MdOutlineShortText className='text-5xl' />
+        </div>
+
       </div>
     </div>
   )

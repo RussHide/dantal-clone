@@ -43,8 +43,8 @@ const Questions = () => {
   ];
   return (
     <div className="w-full  bg-leftLight bg-cover bg-center bg-no-repeat  ">
-      <div className='flex w-full justify-center items-center container mx-auto'>
-        <div className="w-1/2 p-10" >
+      <div className='flex flex-col lg:flex-row w-full justify-center items-center container mx-auto'>
+        <div className="w-full lg:w-1/2 p-10" >
           <div>
             <h3 className='text-5xl text-[#142349] font-bold'>Popular Questions</h3>
             <h3 className='text-5xl text-[#4268D2] mt-1 font-bold'>Answered</h3>
@@ -56,7 +56,7 @@ const Questions = () => {
             <Collapse defaultActiveKey={'1'} accordion bordered={false} expandIcon={() => null} className='headerCollapse' onChange={(e) => setSelectedQuestion(e[0])} items={items} />
           </div>
         </div>
-        <div className="w-1/2 p-10">
+        <div className="w-full lg:w-1/2 p-10">
           <div>
             <img src={QuestionsImage} alt="" />
           </div>

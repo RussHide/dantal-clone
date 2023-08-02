@@ -33,15 +33,15 @@ const Treatments = () => {
 
   return (
     <div className='relative z-40 mb-24 '>
-      <div className='flex justify-between items-center container mx-auto py-12 px-10'>
-        <div className='w-1/2'>
+      <div className='flex flex-col lg:flex-row justify-between items-center container mx-auto py-12 px-10'>
+        <div className='w-full lg:w-1/2 text-center lg:text-left'>
           <h2 className='text-[#142349] text-5xl font-bold'>What <span className="text-[#4268D2]">Dental Treatments</span></h2>
           <h2 className="text-[#142349] text-5xl font-bold mt-2">Do We Offer?</h2>
         </div>
-        <div className='w-1/2'>
-          <div className=' flex justify-end items-center space-x-10'>
-            <button className="prev-button text-[#142349] hover:bg-[#92C1FA]  transition-all rounded-full duration-300  text-4xl border border-[#142349]" onClick={handlePrev}><MdKeyboardArrowLeft /></button>
-            <button className="next-button text-[#142349] hover:bg-[#92C1FA]  transition-all rounded-full duration-300  text-4xl border border-[#142349]" onClick={handleNext}><MdKeyboardArrowRight /></button>
+        <div className='w-full lg:w-1/2'>
+          <div className=' flex lg:justify-end justify-center mt-10 lg:mt-0  items-center space-x-10'>
+            <button className="prev-button text-[#142349] hover:bg-[#92C1FA]  transition-all rounded-full duration-300 text-6xl lg:text-4xl  border border-[#142349]" onClick={handlePrev}><MdKeyboardArrowLeft /></button>
+            <button className="next-button text-[#142349] hover:bg-[#92C1FA]  transition-all rounded-full duration-300 text-6xl lg:text-4xl border border-[#142349]" onClick={handleNext}><MdKeyboardArrowRight /></button>
           </div>
         </div>
       </div>
@@ -50,6 +50,22 @@ const Treatments = () => {
           modules={[Navigation]}
           spaceBetween={50}
           slidesPerView={2}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            // when window width is >= 480px
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 30
+            },
+            700: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+           
+          }}
           loop={true}
           navigation={{
             prevEl: '.prev-button',
